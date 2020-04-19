@@ -74,13 +74,13 @@ class ProfileScreen extends StatelessWidget {
             left: 0,
             right: 0,
             child: Container(
-              height: height * 0.6,
+              height: height * 0.53,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.only(
-                      bottom: 8,
+                      bottom: 5,
                       left: 32,
                       right: 16,
                     ),
@@ -112,7 +112,20 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   Expanded(
                     child: Container(
-                      color: Colors.blueAccent,
+                      margin: const EdgeInsets.only(
+                        bottom: 15,
+                        left: 32,
+                        right: 32,
+                      ),
+                      decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          const Color(0xFF200088),
+                          const Color(0xFF200087)
+                        ],
+                      )),
                     ),
                   ),
                 ],
@@ -135,7 +148,7 @@ class _MealCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(
         right: 20,
-        bottom: 10,
+        bottom: 5,
       ),
       child: Material(
         borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -164,7 +177,7 @@ class _MealCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     SizedBox(
-                      height: 10,
+                      height: 4,
                     ),
                     Text(
                       meal.mealTime,
